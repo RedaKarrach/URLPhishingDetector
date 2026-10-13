@@ -1,0 +1,21 @@
+# dataset (download it, see data/README.md)
+data/*.csv
+data/*.zip
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# scan output
+report*.csv
+report*.json
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
