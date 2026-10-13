@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>URL Phishing Detector</title>
+<meta name="description" content="Phishing URL detection with a decision tree and analyst rules. Runs in your browser, the URL is never contacted.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23222'/%3E%3Cpath d='M4 8h8M8 4v8' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #e4e4e4;
+    --soft: #f6f6f6;
+    --clean: #1f7a3a;
+    --warn: #a86400;
+    --bad: #c4291c;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161616; --fg: #e8e8e8; --muted: #9a9a9a; --line: #2e2e2e; --soft: #1f1f1f;
+            --clean: #5cc27a; --warn: #e0a040; --bad: #ff6b5e; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 var(--font); }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.01em; }
+  p { margin: 0 0 12px; }
+  a { color: inherit; text-underline-offset: 2px; }
+  code { font-family: var(--mono); font-size: 0.88em; background: var(--soft); padding: 1px 5px; border-radius: 3px; }
+  .lead { color: var(--muted); margin-bottom: 28px; }
+  .tabs { display: flex; gap: 20px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+  .tabs button { background: none; border: 0; padding: 8px 0; font: inherit; color: var(--muted); cursor: pointer;
+                 border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tabs button[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--fg); }
+  form { display: flex; gap: 8px; }
+  input, textarea { flex: 1; min-width: 0; font: 15px var(--mono); color: var(--fg); background: var(--bg);
+                    border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; }
+  textarea { width: 100%; min-height: 140px; resize: vertical; display: block; margin-bottom: 8px; }
+  input:focus, textarea:focus { outline: none; border-color: var(--muted); }
+  .btn { font: 600 15px var(--font); color: var(--bg); background: var(--fg); border: 0; border-radius: 6px;
+         padding: 10px 20px; cursor: pointer; }
+  .examples { font-size: 14px; color: var(--muted); margin-top: 10px; }
+  .examples button { background: none; border: 0; padding: 0; margin: 0 10px 0 0; font: inherit;
+                     color: var(--fg); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+  .result { margin-top: 28px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .verdict { font-size: 22px; font-weight: 700; letter-spacing: 0.02em; }
+  .CLEAN { color: var(--clean); } .SUSPICIOUS { color: var(--warn); } .PHISHING { color: var(--bad); }
+  .url { font: 14px var(--mono); color: var(--muted); word-break: break-all; margin: 2px 0 12px; }
+  .nums { display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: 14px; color: var(--muted); }
+  .nums b { color: var(--fg); font-weight: 600; }
+  .bar { height: 4px; background: var(--line); border-radius: 2px; margin: 12px 0 4px; overflow: hidden; }
+  .bar div { height: 100%; background: var(--fg); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 16px; }
+  th, td { text-align: left; padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 500; color: var(--muted); }
+  td.sev { width: 76px; font-size: 12px; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  td.sev.critical, td.sev.high { color: var(--bad); } td.sev.medium { color: var(--warn); }
+  td.rule { font-family: var(--mono); font-size: 13px; white-space: nowrap; }
+  .wrap { overflow-x: auto; }
+  details { margin-top: 16px; font-size: 14px; }
+  summary { cursor: pointer; color: var(--muted); }
+  ol.path { font: 13px/1.8 var(--mono); color: var(--muted); padding-left: 24px; margin: 8px 0 0; }
+  ol.path li:last-child { color: var(--fg); }
+  .feats { font: 13px/1.7 var(--mono); color: var(--muted); columns: 2; column-gap: 24px; margin-top: 8px; }
+  td.url-cell { font-family: var(--mono); font-size: 13px; word-break: break-all; }
+  .note { font-size: 14px; color: var(--muted); margin-top: 8px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  [hidden] { display: none !important; }
+  @media (max-width: 560px) {
+    main { padding-top: 32px; }
+    form { flex-direction: column; }
+    .feats { columns: 1; }
+    td.rule { white-space: normal; }
+    table.batch th:nth-child(4), table.batch td:nth-child(4) { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>URL Phishing Detector</h1>
+  <p class="lead">A decision tree trained on 88,000 URLs, with analyst rules on top. Paste a link to check it.
+    Everything runs in your browser. The URL is analyzed as text and never opened or sent anywhere.</p>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="single">Single URL</button>
+    <button role="tab" aria-selected="false" data-tab="batch">Several URLs</button>
+  </div>
+
+  <section id="tab-single">
+    <form id="form">
+      <input id="url" type="text" autocomplete="off" spellcheck="false"
+             placeholder="https://example.com/login  (defanged hxxp://evil[.]com works too)">
+      <button class="btn" type="submit">Scan</button>
+    </form>
+    <div class="examples">Try:
+      <button data-url="hxxp://paypal.com.secure-account-verification[.]xyz/login?user=client@mail.com">brand in subdomain</button>
+      <button data-url="https://paypa1.com/signin">typosquat</button>
+      <button data-url="https://xn--pple-43d.com/">homoglyph</button>
+      <button data-url="http://www.google.com@evil.example/login">@ trick</button>
+      <button data-url="https://en.wikipedia.org/wiki/Phishing">legit</button>
+    </div>
+    <div id="result" class="result" hidden></div>
+  </section>
+
+  <section id="tab-batch" hidden>
+    <textarea id="batch" spellcheck="false" placeholder="one URL per line"></textarea>
+    <button class="btn" id="batch-run" type="button">Scan all</button>
+    <div id="batch-result" class="wrap"></div>
+  </section>
+
+  <p class="note" style="margin-top:40px">How it works, results and limitations:
+    <a href="https://github.com/RedaKarrach/URLPhishingDetector#readme">README on GitHub</a>.</p>
+
+  <footer>
+    Reda Karrach &middot; <a href="https://github.com/RedaKarrach/URLPhishingDetector">source</a> &middot;
+    for educational and defensive use. A verdict is a triage hint, not a guarantee.
+  </footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

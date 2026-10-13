@@ -15,6 +15,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - run: pip install -r requirements-dev.txt
       - run: python -m pytest -q
       - run: python -m phishdetect scan -f examples/urls.txt --defang || test $? -eq 2

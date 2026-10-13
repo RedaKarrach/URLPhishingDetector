@@ -189,6 +189,51 @@ def cmd_train(args):
           plots=not args.no_plots)
 
 
+def cmd_export_web(args):
+    """
+    Everything the browser port (docs/engine.js) needs: the tree and the rule
+    lists. Exporting the lists keeps Python and JS from drifting apart.
+    """
+    from . import detector, features, heuristics
+
+    bundle = detector.load_bundle(args.model)
+    tree = bundle["model"].tree_
+    values = tree.value[:, 0, :]
+    out = {
+        "columns": list(bundle["columns"]),
+        "meta": bundle.get("meta", {}),
+        "tree": {
+            "left": tree.children_left.tolist(),
+            "right": tree.children_right.tolist(),
+            "feature": tree.feature.tolist(),
+            "threshold": [float(t) for t in tree.threshold],
+            "p": [float(v[1] / v.sum()) for v in values],
+        },
+        "lists": {
+            "special_chars": features.SPECIAL_CHARS,
+            "known_tlds": sorted(features.KNOWN_TLDS),
+            "url_shorteners": sorted(features.URL_SHORTENERS),
+            "brands": {k: sorted(v) for k, v in heuristics.BRANDS.items()},
+            "suspicious_tlds": sorted(heuristics.SUSPICIOUS_TLDS),
+            "sensitive_words": sorted(heuristics.SENSITIVE_WORDS),
+            "free_hosting": sorted(heuristics.FREE_HOSTING),
+            "trusted_domains": sorted(heuristics.TRUSTED_DOMAINS),
+            "second_level": sorted(heuristics._SECOND_LEVEL),
+            "redirect_keys": sorted(heuristics._REDIRECT_KEYS),
+            "homoglyphs": heuristics._HOMOGLYPHS,
+            "confusables": {chr(k): v for k, v in heuristics._CONFUSABLES.items()},
+        },
+        "scoring": {
+            "severity_weight": heuristics.SEVERITY_WEIGHT,
+            "suspicious_at": detector.SUSPICIOUS_AT,
+            "phishing_at": detector.PHISHING_AT,
+            "corroboration": detector.CORROBORATION,
+        },
+    }
+    Path(args.out).write_text(json.dumps(out, separators=(",", ":")), encoding="utf-8")
+    print(f"[+] {tree.node_count} nodes written to {args.out}")
+
+
 def build_parser():
     default_model = str(Path(__file__).resolve().parent.parent / "models" / "url_tree.joblib")
     p = argparse.ArgumentParser(prog="phishdetect", description="Phishing URL detection with a decision tree")
@@ -233,6 +278,10 @@ def build_parser():
     s.add_argument("--no-save", action="store_true", help="evaluate only, do not overwrite the model")
     s.add_argument("--no-plots", action="store_true")
     s.set_defaults(func=cmd_train)
+
+    s = sub.add_parser("export-web", help="export the tree as JSON for the GitHub Pages demo")
+    s.add_argument("--out", default=str(Path(__file__).resolve().parent.parent / "docs" / "model.json"))
+    s.set_defaults(func=cmd_export_web)
     return p
 
 
