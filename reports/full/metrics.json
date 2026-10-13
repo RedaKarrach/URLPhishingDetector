@@ -1,0 +1,178 @@
+{
+  "dataset": {
+    "rows_raw": 88647,
+    "rows_dedup": 87209,
+    "constant_columns": [
+      "qty_slash_domain",
+      "qty_questionmark_domain",
+      "qty_equal_domain",
+      "qty_and_domain",
+      "qty_exclamation_domain",
+      "qty_space_domain",
+      "qty_tilde_domain",
+      "qty_comma_domain",
+      "qty_plus_domain",
+      "qty_asterisk_domain",
+      "qty_hashtag_domain",
+      "qty_dollar_domain",
+      "qty_percent_domain"
+    ],
+    "file": "dataset_full.csv",
+    "phishing_share": 0.3497
+  },
+  "feature_set": "full",
+  "n_features": 98,
+  "best_params": {
+    "criterion": "gini",
+    "max_depth": 15,
+    "min_samples_leaf": 1
+  },
+  "cv_f1": 0.9373,
+  "tree": {
+    "depth": 15,
+    "leaves": 1374
+  },
+  "train_accuracy": 0.9846,
+  "test": {
+    "accuracy": 0.9552,
+    "precision": 0.9407,
+    "recall": 0.9305,
+    "f1": 0.9355,
+    "fpr": 0.0316,
+    "fnr": 0.0695,
+    "confusion": {
+      "tn": 10985,
+      "fp": 358,
+      "fn": 424,
+      "tp": 5675
+    }
+  },
+  "cost_fn_vs_fp": 20,
+  "threshold_table": [
+    {
+      "threshold": 0.1,
+      "fp": 556,
+      "fn": 310,
+      "recall": 0.9492,
+      "precision": 0.9124,
+      "cost": 6756
+    },
+    {
+      "threshold": 0.2,
+      "fp": 488,
+      "fn": 345,
+      "recall": 0.9434,
+      "precision": 0.9218,
+      "cost": 7388
+    },
+    {
+      "threshold": 0.3,
+      "fp": 432,
+      "fn": 372,
+      "recall": 0.939,
+      "precision": 0.9299,
+      "cost": 7872
+    },
+    {
+      "threshold": 0.4,
+      "fp": 421,
+      "fn": 379,
+      "recall": 0.9379,
+      "precision": 0.9314,
+      "cost": 8001
+    },
+    {
+      "threshold": 0.5,
+      "fp": 376,
+      "fn": 415,
+      "recall": 0.932,
+      "precision": 0.938,
+      "cost": 8676
+    },
+    {
+      "threshold": 0.6,
+      "fp": 350,
+      "fn": 432,
+      "recall": 0.9292,
+      "precision": 0.9418,
+      "cost": 8990
+    },
+    {
+      "threshold": 0.7,
+      "fp": 329,
+      "fn": 457,
+      "recall": 0.9251,
+      "precision": 0.9449,
+      "cost": 9469
+    },
+    {
+      "threshold": 0.8,
+      "fp": 324,
+      "fn": 494,
+      "recall": 0.919,
+      "precision": 0.9454,
+      "cost": 10204
+    },
+    {
+      "threshold": 0.9,
+      "fp": 302,
+      "fn": 640,
+      "recall": 0.8951,
+      "precision": 0.9476,
+      "cost": 13102
+    }
+  ],
+  "cost_optimal_threshold": 0.1,
+  "subgroups": {
+    "without_path": {
+      "accuracy": 0.9855,
+      "precision": 0.5913,
+      "recall": 0.4359,
+      "f1": 0.5018,
+      "fpr": 0.0051,
+      "fnr": 0.5641,
+      "confusion": {
+        "tn": 9110,
+        "fp": 47,
+        "fn": 88,
+        "tp": 68
+      },
+      "n": 9313,
+      "phishing_share": 0.0168
+    },
+    "with_path": {
+      "accuracy": 0.9204,
+      "precision": 0.9474,
+      "recall": 0.9435,
+      "f1": 0.9455,
+      "fpr": 0.1423,
+      "fnr": 0.0565,
+      "confusion": {
+        "tn": 1875,
+        "fp": 311,
+        "fn": 336,
+        "tp": 5607
+      },
+      "n": 8129,
+      "phishing_share": 0.7311
+    }
+  },
+  "top_features": {
+    "directory_length": 0.6359,
+    "time_domain_activation": 0.1136,
+    "qty_dollar_directory": 0.045,
+    "asn_ip": 0.0309,
+    "length_url": 0.0225,
+    "qty_dot_domain": 0.0207,
+    "time_response": 0.0199,
+    "ttl_hostname": 0.016,
+    "qty_nameservers": 0.011,
+    "domain_length": 0.0096,
+    "time_domain_expiration": 0.0084,
+    "qty_ip_resolved": 0.0076,
+    "qty_redirects": 0.0075,
+    "qty_vowels_domain": 0.0061,
+    "qty_hyphen_directory": 0.0058
+  },
+  "unused_features": 43
+}

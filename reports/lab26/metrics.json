@@ -1,0 +1,145 @@
+{
+  "dataset": {
+    "rows_raw": 88647,
+    "rows_dedup": 87209,
+    "constant_columns": [
+      "qty_slash_domain",
+      "qty_questionmark_domain",
+      "qty_equal_domain",
+      "qty_and_domain",
+      "qty_exclamation_domain",
+      "qty_space_domain",
+      "qty_tilde_domain",
+      "qty_comma_domain",
+      "qty_plus_domain",
+      "qty_asterisk_domain",
+      "qty_hashtag_domain",
+      "qty_dollar_domain",
+      "qty_percent_domain"
+    ],
+    "file": "dataset_full.csv",
+    "phishing_share": 0.3497
+  },
+  "feature_set": "lab26",
+  "n_features": 26,
+  "best_params": {
+    "criterion": "entropy",
+    "max_depth": null,
+    "min_samples_leaf": 20
+  },
+  "cv_f1": 0.8912,
+  "tree": {
+    "depth": 23,
+    "leaves": 1040
+  },
+  "train_accuracy": 0.9331,
+  "test": {
+    "accuracy": 0.9259,
+    "precision": 0.9076,
+    "recall": 0.8774,
+    "f1": 0.8922,
+    "fpr": 0.048,
+    "fnr": 0.1226,
+    "confusion": {
+      "tn": 10798,
+      "fp": 545,
+      "fn": 748,
+      "tp": 5351
+    }
+  },
+  "cost_fn_vs_fp": 20,
+  "threshold_table": [
+    {
+      "threshold": 0.1,
+      "fp": 1909,
+      "fn": 165,
+      "recall": 0.9729,
+      "precision": 0.7566,
+      "cost": 5209
+    },
+    {
+      "threshold": 0.2,
+      "fp": 1357,
+      "fn": 280,
+      "recall": 0.9541,
+      "precision": 0.8109,
+      "cost": 6957
+    },
+    {
+      "threshold": 0.3,
+      "fp": 1030,
+      "fn": 415,
+      "recall": 0.932,
+      "precision": 0.8466,
+      "cost": 9330
+    },
+    {
+      "threshold": 0.4,
+      "fp": 751,
+      "fn": 572,
+      "recall": 0.9062,
+      "precision": 0.8804,
+      "cost": 12191
+    },
+    {
+      "threshold": 0.5,
+      "fp": 579,
+      "fn": 718,
+      "recall": 0.8823,
+      "precision": 0.9029,
+      "cost": 14939
+    },
+    {
+      "threshold": 0.6,
+      "fp": 386,
+      "fn": 931,
+      "recall": 0.8474,
+      "precision": 0.9305,
+      "cost": 19006
+    },
+    {
+      "threshold": 0.7,
+      "fp": 312,
+      "fn": 1125,
+      "recall": 0.8155,
+      "precision": 0.941,
+      "cost": 22812
+    },
+    {
+      "threshold": 0.8,
+      "fp": 215,
+      "fn": 1429,
+      "recall": 0.7657,
+      "precision": 0.956,
+      "cost": 28795
+    },
+    {
+      "threshold": 0.9,
+      "fp": 110,
+      "fn": 1938,
+      "recall": 0.6822,
+      "precision": 0.9742,
+      "cost": 38870
+    }
+  ],
+  "cost_optimal_threshold": 0.1,
+  "subgroups": {},
+  "top_features": {
+    "qty_slash_url": 0.6961,
+    "length_url": 0.1281,
+    "qty_dot_domain": 0.0598,
+    "domain_length": 0.0518,
+    "qty_vowels_domain": 0.0243,
+    "qty_hyphen_url": 0.0178,
+    "qty_dot_url": 0.0108,
+    "qty_hyphen_domain": 0.0034,
+    "qty_underline_url": 0.0018,
+    "qty_exclamation_url": 0.0017,
+    "qty_equal_url": 0.001,
+    "qty_percent_url": 0.0009,
+    "qty_and_url": 0.0008,
+    "qty_at_url": 0.0007,
+    "domain_in_ip": 0.0005
+  },
+  "unused_features": 9
+}

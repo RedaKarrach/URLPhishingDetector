@@ -1,0 +1,283 @@
+|--- qty_slash_url <= 0.50
+|   |--- qty_dot_domain <= 1.50
+|   |   |--- qty_hyphen_url <= 0.50
+|   |   |   |--- length_url <= 9.50
+|   |   |   |   |--- length_url <= 7.50
+|   |   |   |   |   |--- qty_vowels_domain <= 1.50
+|   |   |   |   |   |   |--- qty_vowels_domain <= 0.50
+|   |   |   |   |   |   |   |--- weights: [23.00, 1.00] class: 0
+|   |   |   |   |   |   |--- qty_vowels_domain >  0.50
+|   |   |   |   |   |   |   |--- weights: [70.00, 0.00] class: 0
+|   |   |   |   |   |--- qty_vowels_domain >  1.50
+|   |   |   |   |   |   |--- domain_length <= 6.50
+|   |   |   |   |   |   |   |--- weights: [24.00, 0.00] class: 0
+|   |   |   |   |   |   |--- domain_length >  6.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- length_url >  7.50
+|   |   |   |   |   |--- qty_vowels_domain <= 3.50
+|   |   |   |   |   |   |--- domain_length <= 8.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- domain_length >  8.50
+|   |   |   |   |   |   |   |--- weights: [202.00, 0.00] class: 0
+|   |   |   |   |   |--- qty_vowels_domain >  3.50
+|   |   |   |   |   |   |--- weights: [59.00, 1.00] class: 0
+|   |   |   |--- length_url >  9.50
+|   |   |   |   |--- domain_length <= 12.50
+|   |   |   |   |   |--- qty_vowels_domain <= 3.50
+|   |   |   |   |   |   |--- domain_length <= 10.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- domain_length >  10.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |--- qty_vowels_domain >  3.50
+|   |   |   |   |   |   |--- domain_length <= 11.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- domain_length >  11.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- domain_length >  12.50
+|   |   |   |   |   |--- length_url <= 27.50
+|   |   |   |   |   |   |--- length_url <= 18.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |--- length_url >  18.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- length_url >  27.50
+|   |   |   |   |   |   |--- weights: [30.00, 4.00] class: 0
+|   |   |--- qty_hyphen_url >  0.50
+|   |   |   |--- length_url <= 24.50
+|   |   |   |   |--- qty_vowels_domain <= 4.50
+|   |   |   |   |   |--- length_url <= 10.50
+|   |   |   |   |   |   |--- weights: [17.00, 3.00] class: 0
+|   |   |   |   |   |--- length_url >  10.50
+|   |   |   |   |   |   |--- length_url <= 13.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- length_url >  13.50
+|   |   |   |   |   |   |   |--- weights: [41.00, 5.00] class: 0
+|   |   |   |   |--- qty_vowels_domain >  4.50
+|   |   |   |   |   |--- qty_hyphen_domain <= 1.50
+|   |   |   |   |   |   |--- domain_length <= 15.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- domain_length >  15.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |--- qty_hyphen_domain >  1.50
+|   |   |   |   |   |   |--- weights: [22.00, 11.00] class: 0
+|   |   |   |--- length_url >  24.50
+|   |   |   |   |--- weights: [17.00, 14.00] class: 0
+|   |--- qty_dot_domain >  1.50
+|   |   |--- qty_vowels_domain <= 7.50
+|   |   |   |--- length_url <= 28.50
+|   |   |   |   |--- qty_vowels_domain <= 0.50
+|   |   |   |   |   |--- length_url <= 10.50
+|   |   |   |   |   |   |--- weights: [27.00, 0.00] class: 0
+|   |   |   |   |   |--- length_url >  10.50
+|   |   |   |   |   |   |--- weights: [15.00, 5.00] class: 0
+|   |   |   |   |--- qty_vowels_domain >  0.50
+|   |   |   |   |   |--- qty_vowels_domain <= 5.50
+|   |   |   |   |   |   |--- qty_hyphen_url <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |--- qty_hyphen_url >  0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |--- qty_vowels_domain >  5.50
+|   |   |   |   |   |   |--- qty_hyphen_domain <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 17
+|   |   |   |   |   |   |--- qty_hyphen_domain >  0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |--- length_url >  28.50
+|   |   |   |   |--- qty_dot_domain <= 2.50
+|   |   |   |   |   |--- domain_length <= 29.50
+|   |   |   |   |   |   |--- weights: [26.00, 2.00] class: 0
+|   |   |   |   |   |--- domain_length >  29.50
+|   |   |   |   |   |   |--- weights: [20.00, 7.00] class: 0
+|   |   |   |   |--- qty_dot_domain >  2.50
+|   |   |   |   |   |--- weights: [56.00, 0.00] class: 0
+|   |   |--- qty_vowels_domain >  7.50
+|   |   |   |--- domain_length <= 40.50
+|   |   |   |   |--- qty_hyphen_domain <= 0.50
+|   |   |   |   |   |--- qty_dot_domain <= 2.50
+|   |   |   |   |   |   |--- length_url <= 32.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |   |   |--- length_url >  32.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |--- qty_dot_domain >  2.50
+|   |   |   |   |   |   |--- domain_length <= 36.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |--- domain_length >  36.50
+|   |   |   |   |   |   |   |--- weights: [18.00, 2.00] class: 0
+|   |   |   |   |--- qty_hyphen_domain >  0.50
+|   |   |   |   |   |--- qty_vowels_domain <= 11.50
+|   |   |   |   |   |   |--- length_url <= 29.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |--- length_url >  29.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |--- qty_vowels_domain >  11.50
+|   |   |   |   |   |   |--- domain_length <= 34.50
+|   |   |   |   |   |   |   |--- weights: [16.00, 5.00] class: 0
+|   |   |   |   |   |   |--- domain_length >  34.50
+|   |   |   |   |   |   |   |--- weights: [18.00, 3.00] class: 0
+|   |   |   |--- domain_length >  40.50
+|   |   |   |   |--- domain_length <= 44.50
+|   |   |   |   |   |--- weights: [24.00, 6.00] class: 0
+|   |   |   |   |--- domain_length >  44.50
+|   |   |   |   |   |--- weights: [12.00, 15.00] class: 1
+|--- qty_slash_url >  0.50
+|   |--- length_url <= 28.50
+|   |   |--- qty_dot_domain <= 1.50
+|   |   |   |--- qty_slash_url <= 1.50
+|   |   |   |   |--- domain_length <= 7.50
+|   |   |   |   |   |--- length_url <= 8.50
+|   |   |   |   |   |   |--- domain_length <= 6.50
+|   |   |   |   |   |   |   |--- weights: [21.00, 8.00] class: 0
+|   |   |   |   |   |   |--- domain_length >  6.50
+|   |   |   |   |   |   |   |--- weights: [25.00, 2.00] class: 0
+|   |   |   |   |   |--- length_url >  8.50
+|   |   |   |   |   |   |--- length_url <= 14.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |--- length_url >  14.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |--- domain_length >  7.50
+|   |   |   |   |   |--- length_url <= 13.50
+|   |   |   |   |   |   |--- length_url <= 10.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- length_url >  10.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |--- length_url >  13.50
+|   |   |   |   |   |   |--- qty_dot_url <= 1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |--- qty_dot_url >  1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |--- qty_slash_url >  1.50
+|   |   |   |   |--- qty_exclamation_url <= 0.50
+|   |   |   |   |   |--- length_url <= 21.50
+|   |   |   |   |   |   |--- qty_slash_url <= 2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |--- qty_slash_url >  2.50
+|   |   |   |   |   |   |   |--- weights: [1.00, 39.00] class: 1
+|   |   |   |   |   |--- length_url >  21.50
+|   |   |   |   |   |   |--- qty_hyphen_domain <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |--- qty_hyphen_domain >  0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- qty_exclamation_url >  0.50
+|   |   |   |   |   |--- weights: [26.00, 1.00] class: 0
+|   |   |--- qty_dot_domain >  1.50
+|   |   |   |--- length_url <= 21.50
+|   |   |   |   |--- qty_vowels_domain <= 0.50
+|   |   |   |   |   |--- weights: [8.00, 30.00] class: 1
+|   |   |   |   |--- qty_vowels_domain >  0.50
+|   |   |   |   |   |--- qty_dot_domain <= 2.50
+|   |   |   |   |   |   |--- qty_dot_url <= 2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |--- qty_dot_url >  2.50
+|   |   |   |   |   |   |   |--- weights: [5.00, 22.00] class: 1
+|   |   |   |   |   |--- qty_dot_domain >  2.50
+|   |   |   |   |   |   |--- length_url <= 18.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- length_url >  18.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |--- length_url >  21.50
+|   |   |   |   |--- qty_slash_url <= 2.50
+|   |   |   |   |   |--- qty_hyphen_url <= 0.50
+|   |   |   |   |   |   |--- domain_in_ip <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |--- domain_in_ip >  0.50
+|   |   |   |   |   |   |   |--- weights: [1.00, 20.00] class: 1
+|   |   |   |   |   |--- qty_hyphen_url >  0.50
+|   |   |   |   |   |   |--- qty_dot_url <= 2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- qty_dot_url >  2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- qty_slash_url >  2.50
+|   |   |   |   |   |--- qty_vowels_domain <= 3.50
+|   |   |   |   |   |   |--- qty_vowels_domain <= 1.50
+|   |   |   |   |   |   |   |--- weights: [3.00, 18.00] class: 1
+|   |   |   |   |   |   |--- qty_vowels_domain >  1.50
+|   |   |   |   |   |   |   |--- weights: [22.00, 17.00] class: 0
+|   |   |   |   |   |--- qty_vowels_domain >  3.50
+|   |   |   |   |   |   |--- domain_length <= 15.50
+|   |   |   |   |   |   |   |--- weights: [1.00, 31.00] class: 1
+|   |   |   |   |   |   |--- domain_length >  15.50
+|   |   |   |   |   |   |   |--- weights: [4.00, 30.00] class: 1
+|   |--- length_url >  28.50
+|   |   |--- qty_dot_domain <= 1.50
+|   |   |   |--- qty_hyphen_url <= 4.50
+|   |   |   |   |--- length_url <= 58.50
+|   |   |   |   |   |--- domain_length <= 12.50
+|   |   |   |   |   |   |--- qty_hyphen_url <= 1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 11
+|   |   |   |   |   |   |--- qty_hyphen_url >  1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |--- domain_length >  12.50
+|   |   |   |   |   |   |--- qty_slash_url <= 2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |--- qty_slash_url >  2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 10
+|   |   |   |   |--- length_url >  58.50
+|   |   |   |   |   |--- qty_comma_url <= 0.50
+|   |   |   |   |   |   |--- length_url <= 91.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- length_url >  91.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- qty_comma_url >  0.50
+|   |   |   |   |   |   |--- qty_equal_url <= 2.50
+|   |   |   |   |   |   |   |--- weights: [7.00, 13.00] class: 1
+|   |   |   |   |   |   |--- qty_equal_url >  2.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 24.00] class: 1
+|   |   |   |--- qty_hyphen_url >  4.50
+|   |   |   |   |--- length_url <= 144.50
+|   |   |   |   |   |--- qty_hyphen_domain <= 0.50
+|   |   |   |   |   |   |--- qty_slash_url <= 1.50
+|   |   |   |   |   |   |   |--- weights: [2.00, 31.00] class: 1
+|   |   |   |   |   |   |--- qty_slash_url >  1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |--- qty_hyphen_domain >  0.50
+|   |   |   |   |   |   |--- length_url <= 66.00
+|   |   |   |   |   |   |   |--- weights: [3.00, 18.00] class: 1
+|   |   |   |   |   |   |--- length_url >  66.00
+|   |   |   |   |   |   |   |--- weights: [0.00, 24.00] class: 1
+|   |   |   |   |--- length_url >  144.50
+|   |   |   |   |   |--- weights: [0.00, 57.00] class: 1
+|   |   |--- qty_dot_domain >  1.50
+|   |   |   |--- qty_slash_url <= 2.50
+|   |   |   |   |--- domain_length <= 16.50
+|   |   |   |   |   |--- qty_dot_url <= 2.50
+|   |   |   |   |   |   |--- qty_vowels_domain <= 6.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |--- qty_vowels_domain >  6.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |--- qty_dot_url >  2.50
+|   |   |   |   |   |   |--- length_url <= 92.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |--- length_url >  92.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |--- domain_length >  16.50
+|   |   |   |   |   |--- length_url <= 37.50
+|   |   |   |   |   |   |--- qty_dot_domain <= 3.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |--- qty_dot_domain >  3.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |--- length_url >  37.50
+|   |   |   |   |   |   |--- domain_length <= 24.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 15
+|   |   |   |   |   |   |--- domain_length >  24.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |--- qty_slash_url >  2.50
+|   |   |   |   |--- qty_hyphen_url <= 4.50
+|   |   |   |   |   |--- length_url <= 60.50
+|   |   |   |   |   |   |--- domain_length <= 27.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 12
+|   |   |   |   |   |   |--- domain_length >  27.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |--- length_url >  60.50
+|   |   |   |   |   |   |--- qty_hyphen_url <= 2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 14
+|   |   |   |   |   |   |--- qty_hyphen_url >  2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |--- qty_hyphen_url >  4.50
+|   |   |   |   |   |--- length_url <= 139.00
+|   |   |   |   |   |   |--- qty_hyphen_domain <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |--- qty_hyphen_domain >  0.50
+|   |   |   |   |   |   |   |--- weights: [4.00, 32.00] class: 1
+|   |   |   |   |   |--- length_url >  139.00
+|   |   |   |   |   |   |--- qty_hyphen_url <= 10.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 119.00] class: 1
+|   |   |   |   |   |   |--- qty_hyphen_url >  10.50
+|   |   |   |   |   |   |   |--- weights: [3.00, 26.00] class: 1

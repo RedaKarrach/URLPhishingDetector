@@ -1,0 +1,313 @@
+|--- directory_length <= 1.50
+|   |--- qty_dollar_directory <= -0.50
+|   |   |--- time_domain_activation <= 478.50
+|   |   |   |--- qty_dot_url <= 1.50
+|   |   |   |   |--- time_domain_activation <= 2.00
+|   |   |   |   |   |--- length_url <= 17.50
+|   |   |   |   |   |   |--- qty_hyphen_url <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |--- qty_hyphen_url >  0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |--- length_url >  17.50
+|   |   |   |   |   |   |--- time_response <= 0.17
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |--- time_response >  0.17
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |--- time_domain_activation >  2.00
+|   |   |   |   |   |--- time_domain_activation <= 142.50
+|   |   |   |   |   |   |--- ttl_hostname <= 3592.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- ttl_hostname >  3592.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |--- time_domain_activation >  142.50
+|   |   |   |   |   |   |--- tls_ssl_certificate <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- tls_ssl_certificate >  0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |--- qty_dot_url >  1.50
+|   |   |   |   |--- domain_length <= 40.50
+|   |   |   |   |   |--- domain_spf <= -0.50
+|   |   |   |   |   |   |--- ttl_hostname <= 63.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- ttl_hostname >  63.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- domain_spf >  -0.50
+|   |   |   |   |   |   |--- qty_tld_url <= 1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- qty_tld_url >  1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |--- domain_length >  40.50
+|   |   |   |   |   |--- asn_ip <= 18261.00
+|   |   |   |   |   |   |--- qty_vowels_domain <= 10.00
+|   |   |   |   |   |   |   |--- weights: [0.00, 8.00] class: 1
+|   |   |   |   |   |   |--- qty_vowels_domain >  10.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |--- asn_ip >  18261.00
+|   |   |   |   |   |   |--- qty_nameservers <= 1.50
+|   |   |   |   |   |   |   |--- weights: [1.00, 0.00] class: 0
+|   |   |   |   |   |   |--- qty_nameservers >  1.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 14.00] class: 1
+|   |   |--- time_domain_activation >  478.50
+|   |   |   |--- qty_and_params <= -0.50
+|   |   |   |   |--- domain_in_ip <= 0.50
+|   |   |   |   |   |--- time_domain_activation <= 2576.00
+|   |   |   |   |   |   |--- url_google_index <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- url_google_index >  0.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 1.00] class: 1
+|   |   |   |   |   |--- time_domain_activation >  2576.00
+|   |   |   |   |   |   |--- length_url <= 5.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- length_url >  5.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |--- domain_in_ip >  0.50
+|   |   |   |   |   |--- weights: [0.00, 2.00] class: 1
+|   |   |   |--- qty_and_params >  -0.50
+|   |   |   |   |--- weights: [0.00, 3.00] class: 1
+|   |--- qty_dollar_directory >  -0.50
+|   |   |--- time_domain_activation <= 588.50
+|   |   |   |--- qty_dot_domain <= 1.50
+|   |   |   |   |--- time_domain_activation <= 0.50
+|   |   |   |   |   |--- qty_redirects <= -0.50
+|   |   |   |   |   |   |--- ttl_hostname <= 166.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- ttl_hostname >  166.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- qty_redirects >  -0.50
+|   |   |   |   |   |   |--- time_domain_expiration <= 122.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |--- time_domain_expiration >  122.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- time_domain_activation >  0.50
+|   |   |   |   |   |--- time_domain_activation <= 279.00
+|   |   |   |   |   |   |--- qty_mx_servers <= 5.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- qty_mx_servers >  5.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- time_domain_activation >  279.00
+|   |   |   |   |   |   |--- time_domain_expiration <= 64.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- time_domain_expiration >  64.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |--- qty_dot_domain >  1.50
+|   |   |   |   |--- length_url <= 28.50
+|   |   |   |   |   |--- asn_ip <= 47374.50
+|   |   |   |   |   |   |--- qty_ip_resolved <= 4.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- qty_ip_resolved >  4.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |--- asn_ip >  47374.50
+|   |   |   |   |   |   |--- asn_ip <= 49743.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |--- asn_ip >  49743.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |--- length_url >  28.50
+|   |   |   |   |   |--- qty_nameservers <= 3.50
+|   |   |   |   |   |   |--- qty_mx_servers <= 6.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |--- qty_mx_servers >  6.50
+|   |   |   |   |   |   |   |--- weights: [2.00, 0.00] class: 0
+|   |   |   |   |   |--- qty_nameservers >  3.50
+|   |   |   |   |   |   |--- asn_ip <= 15980.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- asn_ip >  15980.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |--- time_domain_activation >  588.50
+|   |   |   |--- qty_plus_params <= -0.50
+|   |   |   |   |--- time_domain_activation <= 1585.50
+|   |   |   |   |   |--- asn_ip <= 19959.00
+|   |   |   |   |   |   |--- length_url <= 29.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- length_url >  29.00
+|   |   |   |   |   |   |   |--- weights: [0.00, 4.00] class: 1
+|   |   |   |   |   |--- asn_ip >  19959.00
+|   |   |   |   |   |   |--- ttl_hostname <= 6755.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- ttl_hostname >  6755.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |--- time_domain_activation >  1585.50
+|   |   |   |   |   |--- ttl_hostname <= 10678.00
+|   |   |   |   |   |   |--- domain_in_ip <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- domain_in_ip >  0.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 1.00] class: 1
+|   |   |   |   |   |--- ttl_hostname >  10678.00
+|   |   |   |   |   |   |--- qty_dot_url <= 1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- qty_dot_url >  1.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |--- qty_plus_params >  -0.50
+|   |   |   |   |--- time_domain_activation <= 4436.00
+|   |   |   |   |   |--- asn_ip <= 7115.00
+|   |   |   |   |   |   |--- qty_underline_url <= 0.50
+|   |   |   |   |   |   |   |--- weights: [2.00, 0.00] class: 0
+|   |   |   |   |   |   |--- qty_underline_url >  0.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 1.00] class: 1
+|   |   |   |   |   |--- asn_ip >  7115.00
+|   |   |   |   |   |   |--- qty_redirects <= -0.50
+|   |   |   |   |   |   |   |--- weights: [1.00, 0.00] class: 0
+|   |   |   |   |   |   |--- qty_redirects >  -0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |--- time_domain_activation >  4436.00
+|   |   |   |   |   |--- params_length <= 34.50
+|   |   |   |   |   |   |--- qty_vowels_domain <= 0.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 1.00] class: 1
+|   |   |   |   |   |   |--- qty_vowels_domain >  0.50
+|   |   |   |   |   |   |   |--- weights: [21.00, 0.00] class: 0
+|   |   |   |   |   |--- params_length >  34.50
+|   |   |   |   |   |   |--- weights: [0.00, 7.00] class: 1
+|--- directory_length >  1.50
+|   |--- time_domain_activation <= 6731.50
+|   |   |--- qty_dot_domain <= 1.50
+|   |   |   |--- qty_hyphen_directory <= 4.50
+|   |   |   |   |--- time_domain_activation <= 3917.00
+|   |   |   |   |   |--- qty_comma_file <= 0.50
+|   |   |   |   |   |   |--- length_url <= 25.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- length_url >  25.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- qty_comma_file >  0.50
+|   |   |   |   |   |   |--- qty_underline_url <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- qty_underline_url >  0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- time_domain_activation >  3917.00
+|   |   |   |   |   |--- ttl_hostname <= 96.00
+|   |   |   |   |   |   |--- directory_length <= 47.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- directory_length >  47.00
+|   |   |   |   |   |   |   |--- weights: [0.00, 11.00] class: 1
+|   |   |   |   |   |--- ttl_hostname >  96.00
+|   |   |   |   |   |   |--- directory_length <= 4.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |--- directory_length >  4.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |--- qty_hyphen_directory >  4.50
+|   |   |   |   |--- time_domain_activation <= 1925.00
+|   |   |   |   |   |--- asn_ip <= 19434.50
+|   |   |   |   |   |   |--- qty_slash_url <= 5.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |--- qty_slash_url >  5.00
+|   |   |   |   |   |   |   |--- weights: [0.00, 9.00] class: 1
+|   |   |   |   |   |--- asn_ip >  19434.50
+|   |   |   |   |   |   |--- time_domain_expiration <= 1663.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |--- time_domain_expiration >  1663.50
+|   |   |   |   |   |   |   |--- weights: [1.00, 0.00] class: 0
+|   |   |   |   |--- time_domain_activation >  1925.00
+|   |   |   |   |   |--- qty_tld_url <= 1.50
+|   |   |   |   |   |   |--- file_length <= 3.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- file_length >  3.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |--- qty_tld_url >  1.50
+|   |   |   |   |   |   |--- weights: [0.00, 15.00] class: 1
+|   |   |--- qty_dot_domain >  1.50
+|   |   |   |--- directory_length <= 19.50
+|   |   |   |   |--- time_domain_activation <= 4539.50
+|   |   |   |   |   |--- asn_ip <= 55027.50
+|   |   |   |   |   |   |--- time_response <= 0.04
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- time_response >  0.04
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- asn_ip >  55027.50
+|   |   |   |   |   |   |--- asn_ip <= 55169.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- asn_ip >  55169.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |--- time_domain_activation >  4539.50
+|   |   |   |   |   |--- ttl_hostname <= 1301.50
+|   |   |   |   |   |   |--- qty_vowels_domain <= 5.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- qty_vowels_domain >  5.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- ttl_hostname >  1301.50
+|   |   |   |   |   |   |--- asn_ip <= 29099.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- asn_ip >  29099.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |--- directory_length >  19.50
+|   |   |   |   |--- time_response <= 0.04
+|   |   |   |   |   |--- qty_redirects <= 0.50
+|   |   |   |   |   |   |--- qty_slash_url <= 2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |--- qty_slash_url >  2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- qty_redirects >  0.50
+|   |   |   |   |   |   |--- qty_nameservers <= 2.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 3.00] class: 1
+|   |   |   |   |   |   |--- qty_nameservers >  2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |--- time_response >  0.04
+|   |   |   |   |   |--- qty_hyphen_directory <= 4.50
+|   |   |   |   |   |   |--- time_domain_activation <= 4647.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- time_domain_activation >  4647.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- qty_hyphen_directory >  4.50
+|   |   |   |   |   |   |--- length_url <= 144.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- length_url >  144.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |--- time_domain_activation >  6731.50
+|   |   |--- qty_dot_domain <= 1.50
+|   |   |   |--- qty_nameservers <= 9.50
+|   |   |   |   |--- time_domain_activation <= 8183.50
+|   |   |   |   |   |--- length_url <= 39.50
+|   |   |   |   |   |   |--- tls_ssl_certificate <= 0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |--- tls_ssl_certificate >  0.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- length_url >  39.50
+|   |   |   |   |   |   |--- time_domain_activation <= 6764.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- time_domain_activation >  6764.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |--- time_domain_activation >  8183.50
+|   |   |   |   |   |--- ttl_hostname <= 1066.00
+|   |   |   |   |   |   |--- time_domain_activation <= 9291.50
+|   |   |   |   |   |   |   |--- weights: [36.00, 0.00] class: 0
+|   |   |   |   |   |   |--- time_domain_activation >  9291.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 1.00] class: 1
+|   |   |   |   |   |--- ttl_hostname >  1066.00
+|   |   |   |   |   |   |--- asn_ip <= 8400.50
+|   |   |   |   |   |   |   |--- weights: [2.00, 0.00] class: 0
+|   |   |   |   |   |   |--- asn_ip >  8400.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 9.00] class: 1
+|   |   |   |--- qty_nameservers >  9.50
+|   |   |   |   |--- weights: [113.00, 0.00] class: 0
+|   |   |--- qty_dot_domain >  1.50
+|   |   |   |--- length_url <= 128.50
+|   |   |   |   |--- time_domain_activation <= 7267.00
+|   |   |   |   |   |--- qty_slash_url <= 2.50
+|   |   |   |   |   |   |--- directory_length <= 34.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- directory_length >  34.00
+|   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |--- qty_slash_url >  2.50
+|   |   |   |   |   |   |--- time_response <= 0.24
+|   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |--- time_response >  0.24
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |--- time_domain_activation >  7267.00
+|   |   |   |   |   |--- tld_present_params <= 0.50
+|   |   |   |   |   |   |--- qty_slash_url <= 2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |   |--- qty_slash_url >  2.50
+|   |   |   |   |   |   |   |--- truncated branch of depth 9
+|   |   |   |   |   |--- tld_present_params >  0.50
+|   |   |   |   |   |   |--- qty_nameservers <= 4.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 8.00] class: 1
+|   |   |   |   |   |   |--- qty_nameservers >  4.50
+|   |   |   |   |   |   |   |--- weights: [2.00, 0.00] class: 0
+|   |   |   |--- length_url >  128.50
+|   |   |   |   |--- qty_plus_url <= 0.50
+|   |   |   |   |   |--- time_domain_activation <= 8545.00
+|   |   |   |   |   |   |--- qty_hyphen_url <= 13.50
+|   |   |   |   |   |   |   |--- weights: [0.00, 62.00] class: 1
+|   |   |   |   |   |   |--- qty_hyphen_url >  13.50
+|   |   |   |   |   |   |   |--- weights: [1.00, 0.00] class: 0
+|   |   |   |   |   |--- time_domain_activation >  8545.00
+|   |   |   |   |   |   |--- weights: [1.00, 0.00] class: 0
+|   |   |   |   |--- qty_plus_url >  0.50
+|   |   |   |   |   |--- weights: [2.00, 0.00] class: 0
