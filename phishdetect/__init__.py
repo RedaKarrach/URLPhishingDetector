@@ -1,3 +1,3 @@
-"""Phishing URL detection with a decision tree (LAB_02, AI for Cybersecurity)."""
+"""Phishing URL detection with a decision tree and analyst rules."""
 
 __version__ = "1.0.0"

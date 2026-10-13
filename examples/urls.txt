@@ -2,7 +2,7 @@
 # Malicious-looking entries are made up / defanged, do not visit them.
 google.com
 https://en.wikipedia.org/wiki/Phishing
-https://www.emsi.ma/formations/ingenierie
+https://www.lemonde.fr/
 https://github.com/scikit-learn/scikit-learn
 https://outlook.office365.com/mail/
 hxxp://192.168.12[.]7/banque/connexion.php

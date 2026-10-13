@@ -1,5 +1,5 @@
 """
-Training pipeline, same methodology as LAB_02:
+Training pipeline:
 
   1. drop duplicate rows and constant columns
   2. stratified 80/20 split (random_state=42)
@@ -26,7 +26,7 @@ from .features import LAB_URL_COLUMNS, LEXICAL_COLUMNS, NETWORK_COLUMNS
 FEATURE_SETS = {
     # Offline, computable from the URL string -> usable by the scanner.
     "lexical": LEXICAL_COLUMNS,
-    # The 26 columns of lab step 14.
+    # The 26 URL-text columns of the original notebook.
     "lab26": LAB_URL_COLUMNS,
     # Everything, including WHOIS/DNS/HTTP columns. Benchmark only:
     # the scanner cannot rebuild these offline.
