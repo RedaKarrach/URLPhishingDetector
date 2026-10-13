@@ -1,0 +1,30 @@
+From: "Microsoft 365" <no-reply@micros0ft-support.top>
+Reply-To: helpdesk.m365@gmail.com
+Return-Path: <bounce@mail-relay-77.xyz>
+To: employee@company.ma
+Subject: [Action required] Your mailbox will be suspended
+Date: Mon, 12 Oct 2026 08:14:02 +0100
+Authentication-Results: mx.company.ma; spf=fail smtp.mailfrom=mail-relay-77.xyz; dkim=none; dmarc=fail
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b1"
+
+--b1
+Content-Type: text/plain; charset="utf-8"
+
+Dear user,
+Your mailbox storage is full. Verify your account within 24h:
+http://login.microsoftonline.com.secure-verify.top/owa/?email=employee@company.ma
+Microsoft Corporation
+
+--b1
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p>Dear user,</p>
+<p>Your mailbox storage is full. Verify your account within 24h:</p>
+<p><a href="http://login.microsoftonline.com.secure-verify.top/owa/?email=employee@company.ma">https://outlook.office365.com/verify</a></p>
+<p><a href="https://www.microsoft.com/privacy">Privacy statement</a></p>
+<img src="http://198.51.100.23/track.gif?id=8841">
+</body></html>
+
+--b1--
