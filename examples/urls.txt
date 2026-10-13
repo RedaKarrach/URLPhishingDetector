@@ -1,0 +1,17 @@
+# Mixed sample for batch mode: python -m phishdetect scan -f examples/urls.txt -o report.csv
+# Malicious-looking entries are made up / defanged, do not visit them.
+google.com
+https://en.wikipedia.org/wiki/Phishing
+https://www.emsi.ma/formations/ingenierie
+https://github.com/scikit-learn/scikit-learn
+https://outlook.office365.com/mail/
+hxxp://192.168.12[.]7/banque/connexion.php
+hxxp://paypal.com.secure-account-verification[.]xyz/login?user=client@mail.com
+hxxps://paypa1[.]com/signin
+hxxps://login.microsoftonline.com.verify-session[.]top/common/oauth2
+hxxp://secure-update-cihbank[.]online/client/index.php
+hxxp://www.google.com@evil[.]example/login
+hxxps://xn--pple-43d[.]com/
+hxxps://drive-docs.000webhostapp[.]com/invoice.pdf.exe
+hxxps://login-office365[.]support/owa/?redirect=https://evil.tk
+hxxp://bit[.]ly/3xYz9Q
