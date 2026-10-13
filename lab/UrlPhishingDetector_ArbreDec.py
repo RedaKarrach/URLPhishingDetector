@@ -477,7 +477,7 @@ urls_a_tester = [
  "google.com",
  "https://www.wikipedia.org",
  "https://fr.wikipedia.org/wiki/Hame%C3%A7onnage",
- "https://www.emsi.ma/formations/ingenierie",
+ "https://www.lemonde.fr/",
  "http://192.168.12.7/banque/connexion.php",
  "http://paypal.com.secure-account-verification.xyz/login?user=client@mail.com",
  "http://bit.ly/3xYz9Q",
