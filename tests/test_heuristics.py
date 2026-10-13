@@ -24,6 +24,8 @@ def test_registered_domain(host, expected):
     ("https://xn--pple-43d.com/", "homoglyph"),
     ("https://paypal.com.account-check.xyz/", "brand_in_subdomain"),
     ("https://secure-netflix-billing.com/", "brand_in_domain"),
+    ("https://login-office365.support/", "brand_in_domain"),
+    ("https://micros0ft-support.top/", "brand_in_domain"),
     ("https://evil.tk/", "suspicious_tld"),
     ("https://bit.ly/abc", "url_shortener"),
     ("https://x.000webhostapp.com/", "free_hosting"),

@@ -101,7 +101,7 @@ TRUSTED_DOMAINS = {
     "stackoverflow.com", "paypal.com", "netflix.com", "office.com", "live.com",
     "microsoftonline.com", "yahoo.com", "twitter.com", "x.com", "reddit.com",
     "whatsapp.com", "cloudflare.com", "mozilla.org", "python.org", "gitlab.com",
-    "emsi.ma", "gov.ma", "bing.com", "duckduckgo.com", "openai.com",
+    "gov.ma", "bing.com", "duckduckgo.com", "openai.com",
 }
 
 # Second-level labels under which a ccTLD sells registrations (co.uk, co.ma...).
@@ -186,6 +186,11 @@ def skeleton(text):
     return _fold(text.translate(_CONFUSABLES))
 
 
+def _has_brand(label, brand):
+    # Raw and folded: "micros0ft" needs folding, "office365" must not be folded.
+    return _contains_brand(label, brand) or _contains_brand(_fold(label), brand)
+
+
 def _typosquat_target(sld, reg):
     """Return the official domain `sld` imitates, or None."""
     folded = _fold(sld)
@@ -243,7 +248,7 @@ def analyze(url):
     if "xn--" in host or any(ord(c) > 127 for c in host):
         decoded = unicode_host(host)
         lookalike = skeleton(registered_domain(decoded).split(".")[0])
-        hit = next((d for ds in BRANDS.values() for d in ds if d.split(".")[0] == lookalike), None)
+        hit = next((d for ds in BRANDS.values() for d in sorted(ds) if d.split(".")[0] == lookalike), None)
         if hit:
             add("homoglyph", "critical", f"'{decoded}' renders like {hit} but uses look-alike Unicode letters")
         else:
@@ -270,11 +275,11 @@ def analyze(url):
         for brand in BRANDS:
             if known:
                 break
-            if any(_contains_brand(_fold(s), brand) for s in subdomains):
+            if any(_has_brand(s, brand) for s in subdomains):
                 add("brand_in_subdomain", "high",
                     f"'{brand}' appears in the subdomain but the real domain is {reg}")
                 break
-            if _contains_brand(_fold(sld), brand):
+            if _has_brand(sld, brand):
                 add("brand_in_domain", "high",
                     f"'{brand}' embedded in {reg}, which is not an official {brand} domain")
                 break
@@ -298,7 +303,7 @@ def analyze(url):
                 f"'{sld}' looks randomly generated (entropy {shannon_entropy(sld):.2f})")
         if sld.count("-") >= 2 and not sld.startswith("xn--"):
             add("hyphenated_domain", "low", f"{sld.count('-')} hyphens in '{sld}'")
-        if re.search(r"\d", sld) and re.search(r"[a-z]", sld) and len(re.findall(r"\d", sld)) >= 4:
+        if not sld.startswith("xn--") and re.search(r"[a-z]", sld) and len(re.findall(r"\d", sld)) >= 4:
             add("digits_in_domain", "low", f"many digits mixed into '{sld}'")
 
     haystack = host + "/" + path_and_query
